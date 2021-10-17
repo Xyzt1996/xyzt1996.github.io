@@ -55,7 +55,13 @@
 					console.log(img)
 				}
 
-				// do something with jsonResponse
+				fetch('https://api.opensea.io/api/v1/asset/0x10064373e248bc7253653ca05df73cf226202956/'+document.getElementById("dreamerid").value+'?force_update=true')
+				.then(function(response) {
+					return response.json();
+				})
+				.then(function(jsonResponse) {
+					console.log(jsonResponse)
+				});
 			});
 		}
 		btn.addEventListener( 'click', function() {
